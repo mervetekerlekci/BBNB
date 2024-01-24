@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#415771"
+        tools:context=".db.AddingNewUser">
+
+        <ImageView
+            android:id="@+id/ImageViewBBNB"
+            android:layout_width="68dp"
+            android:layout_height="66dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/editTextName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="132dp"
+            android:background="@drawable/edittext_register"
+            android:hint="Ad"
+            android:textColor="@color/dusty_bluish_teal"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextSurname"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_register"
+            android:hint="@string/register_surname_text"
+            android:textColor="@color/dusty_bluish_teal"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+        <EditText
+            android:id="@+id/editTextCitizenShipNo"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_register"
+            android:hint="TC Kimlik No"
+            android:inputType="number"
+            android:textColor="@color/dusty_bluish_teal"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:maxLength="11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSurname" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="342dp"
+            android:textColor="@color/dusty_bluish_teal"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_register"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextCitizenShipNo" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_register"
+            android:textColor="@color/dusty_bluish_teal"
+            android:hint="Telefon No"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/dusty_bluish_teal"
+            android:background="@drawable/edittext_register"
+            android:hint="Şifre"
+            android:inputType="numberPassword"
+            android:maxLength="6"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="342dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/dusty_bluish_teal"
+            android:background="@drawable/edittext_register"
+            android:hint="Şifre Onay"
+            android:maxLength="6"
+            android:inputType="numberPassword"
+            android:padding="10dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Üye Ol"
+            android:textColor="@color/grayish_dusty_rose"
+            android:backgroundTint="@color/dusty_bluish_teal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.865"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword"
+             />
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:text="İptal"
+            android:textColor="@color/grayish_dusty_rose"
+            android:backgroundTint="@color/dusty_bluish_teal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword"
+            android:layout_marginStart="16dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

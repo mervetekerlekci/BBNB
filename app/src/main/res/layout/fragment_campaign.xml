@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/campaignFragmentConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.campaign.CampaignFragment">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:paddingTop="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:id="@+id/containerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:radius="20dp">
+
+                <!-- Kart 1 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"  >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:contentDescription="Image Description"
+                            android:paddingTop="30dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/alisveris" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Denizbank' ta giyim alışverişlerinize özel 200 TL Bonus!"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+
+                        <Button
+                            android:id="@+id/joinButton"
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:text="Katıl"
+                            android:layout_gravity="center"
+                            android:paddingTop="16dp"
+                            android:onClick="onJoinButtonClick"
+                            android:backgroundTint="@color/dusty_bluish_teal"
+                            android:textColor="@color/grayish_dusty_rose"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:contentDescription="Image Description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/shopping" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Finansbank kartınızla yapacağınız tüm market alışverişlerinde 500 tl bonus kazanma fırsatı!"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+
+                        <Button
+                            android:id="@+id/joinButton1"
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:text="Katıl"
+                            android:layout_gravity="center"
+                            android:paddingTop="16dp"
+                            android:onClick="onJoinButtonClick"
+                            android:backgroundTint="@color/dusty_bluish_teal"
+                            android:textColor="@color/grayish_dusty_rose"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:contentDescription="Image Description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/egitim" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Akbank kartınızla yapacağınız eğitim harcamalarınızda +5 taksit!"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+
+                        <Button
+                            android:id="@+id/joinButton2"
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:text="Katıl"
+                            android:layout_gravity="center"
+                            android:paddingTop="16dp"
+                            android:onClick="onJoinButtonClick"
+                            android:backgroundTint="@color/dusty_bluish_teal"
+                            android:textColor="@color/grayish_dusty_rose"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="20dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:contentDescription="Image Description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/akaryakit" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Shell'den yapacağınız her akaryakıt alışverişinde Bonuslu kartlara özel 50 TL Bonus fırsatı!"
+                            android:textSize="16sp"
+                            android:paddingTop="8dp"/>
+
+                        <Button
+                            android:id="@+id/joinButton3"
+                            android:layout_width="330dp"
+                            android:layout_height="wrap_content"
+                            android:text="Katıl"
+                            android:layout_gravity="center"
+                            android:paddingTop="16dp"
+                            android:onClick="onJoinButtonClick"
+                            android:backgroundTint="@color/dusty_bluish_teal"
+                            android:textColor="@color/grayish_dusty_rose"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

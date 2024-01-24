@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/bottomNavMenu_home" />
+
+    <item
+        android:id="@+id/campaignFragment"
+        android:icon="@drawable/baseline_campaign_24"
+        android:title="@string/bottomNavMenu_campaigns" />
+
+    <item
+        android:id="@+id/spendingsFragment"
+        android:icon="@drawable/baseline_pie_chart_24"
+        android:title="@string/bottomNavMenu_spendingsGraph" />
+
+</menu>

@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">BBNB</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottomNavMenu_home">Ana Sayfa</string>
+    <string name="bottomNavMenu_campaigns">Kampanyalar</string>
+    <string name="bottomNavMenu_spendingsGraph">Harcamalar Grafiği</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_deneme">DenemeActivity</string>
+    <string name="logo">BBNB</string>
+    <string name="home_header">Kredi Kartlarınız</string>
+    <string name="registerText"><u>Üye Olmak İstiyorum</u></string>
+    <string name="forgetMyPasswordText"><u>Şifremi Unuttum</u></string>
+    <string name="register_surname_text">Soyad</string>
+    <string name="emailValidationText">Lütfen email adresinizi ve TC kimlik numaranızı giriniz.</string>
+    <string name="emailHint">Email</string>
+    <string name="emailValidationButtonText">ONAYLA</string>
+    <string name="forgottenPasswordTextt">Şifreyi sıfırla</string>
+    <string name="card_title_hint">Kart Başlığınız:</string>
+    <string name="card_title_textView">Kart Başlığı</string>
+    <string name="cardimageText">cardImage</string>
+    <string name="card_no_text">Kart Numaranız:</string>
+    <string name="usable_limit_text">Kullanılabilir Limitiniz:</string>
+    <string name="card_balance_text">Bakiyeniz:</string>
+    <string name="card_dept_text">"Borcunuz: "</string>
+    <string name="currency_text">₺</string>
+    <string name="spendings_text">Dönem İçi Hareketleriniz</string>
+    <string name="card_details_txt">Kart Detaylarınız</string>
+    <string name="there_is_no_card_text">Şuanda herhangi bir kredi kartınız yok. \n Sağ altta bulunan kart ekleme butonunu kullanabilirsiniz.</string>
+</resources>

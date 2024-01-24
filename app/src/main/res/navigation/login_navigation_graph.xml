@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.atakandalkiran.bbnb.ui.login.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_emailValidationFragment"
+            app:destination="@id/emailValidationFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainActivity"
+            app:destination="@id/mainActivity">
+            <argument
+                android:name="userId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.atakandalkiran.bbnb.ui.register.RegisterFragment"
+        android:label="RegisterFragment">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgottenPasswordFragment"
+        android:name="com.atakandalkiran.bbnb.ui.forgotten_password.ForgottenPasswordFragment"
+        android:label="fragment_forgotten_password"
+        tools:layout="@layout/fragment_forgotten_password">
+        <action
+            android:id="@+id/action_forgottenPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailValidationFragment"
+        android:name="com.atakandalkiran.bbnb.ui.email_validation.EmailValidationFragment"
+        android:label="fragment_email_validation"
+        tools:layout="@layout/fragment_email_validation">
+        <action
+            android:id="@+id/action_emailValidationFragment_to_forgottenPasswordFragment"
+            app:destination="@id/forgottenPasswordFragment">
+            <argument
+                android:name="email"
+                app:argType="string" />
+            <argument
+                android:name="citizenshipNo"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.atakandalkiran.bbnb.MainActivity"
+        android:label="MainActivity" />
+</navigation>

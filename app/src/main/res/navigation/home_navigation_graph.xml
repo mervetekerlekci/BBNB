@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.atakandalkiran.bbnb.ui.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" >
+            <argument
+                android:name="userId"
+                app:argType="integer" />
+            <argument
+                android:name="cardTitle"
+                app:argType="string" />
+            <argument
+                android:name="cardNo"
+                app:argType="string" />
+            <argument
+                android:name="usableLimit"
+                app:argType="integer"/>
+            <argument
+                android:name="debt"
+                app:argType="integer" />
+            <argument
+                android:name="balance"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_addingCardFragment"
+            app:destination="@id/addingCardFragment" >
+            <argument
+                android:name="userId"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.atakandalkiran.bbnb.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" >
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/campaignFragment"
+        android:name="com.atakandalkiran.bbnb.ui.campaign.CampaignFragment"
+        android:label="CampaignFragment" />
+    <fragment
+        android:id="@+id/spendingsFragment"
+        android:name="com.atakandalkiran.bbnb.ui.spendings.SpendingsFragment"
+        android:label="fragment_spendings"
+        tools:layout="@layout/fragment_spendings" />
+    <fragment
+        android:id="@+id/addingCardFragment"
+        android:name="com.atakandalkiran.bbnb.ui.adding_card.AddingCardFragment"
+        android:label="AddingCardFragment" >
+        <action
+            android:id="@+id/action_addingCardFragment_to_homeFragment"
+            app:destination="@id/homeFragment" >
+            <argument
+                android:name="userId"
+                app:argType="integer" />
+            <argument
+                android:name="cardTitle"
+                app:argType="string" />
+            <argument
+                android:name="cardNo"
+                app:argType="string" />
+            <argument
+                android:name="usableLimit"
+                app:argType="integer"/>
+            <argument
+                android:name="debt"
+                app:argType="integer" />
+            <argument
+                android:name="balance"
+                app:argType="integer" />
+        </action>
+    </fragment>
+</navigation>

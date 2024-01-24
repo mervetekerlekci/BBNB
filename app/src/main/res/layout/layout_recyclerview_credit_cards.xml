@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        
+        <import type="android.view.View" />
+        
+        <variable
+            name="card"
+            type="com.atakandalkiran.bbnb.db.CardDetailsModel" />
+        <variable
+            name="clickListener"
+            type="com.atakandalkiran.bbnb.util.CardClickListener" />
+        
+    </data>
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        app:cardCornerRadius="@dimen/margin_8dp"
+        app:cardElevation="@dimen/margin_8dp"
+        app:cardUseCompatPadding="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="@{(rootView) -> clickListener.onCardClick(rootView, card)}">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_title_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/margin_16dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{card.cardTitle}"
+                android:hint="@string/card_title_hint"
+                app:layout_constraintStart_toEndOf="@id/cardTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="2dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cardImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardTitleText"
+                android:src="@drawable/card_image"
+                android:layout_marginStart="13dp"
+                android:contentDescription="@string/cardimageText"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardImage"
+                android:layout_marginStart="@dimen/margin_8dp"
+                app:layout_constraintTop_toBottomOf="@id/cardTitleText"
+                android:text="@string/card_no_text"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardNoText"
+                android:hint="@string/card_no_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardNo"
+                android:layout_marginStart="2dp"
+                app:layout_constraintTop_toBottomOf="@id/cardTitleText"
+                android:text="@{card.cardNo}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/usableLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/usable_limit_text"
+                app:layout_constraintStart_toEndOf="@id/cardImage"
+                app:layout_constraintTop_toBottomOf="@id/cardNoText"
+                android:layout_marginStart="@dimen/margin_8dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/usableLimitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/usableLimit"
+                app:layout_constraintTop_toBottomOf="@id/cardNoText"
+                android:layout_marginStart="2dp"
+                android:text="@{String.valueOf(card.usableLimit)}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/usableLimitCurrencies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/usableLimitText"
+                app:layout_constraintTop_toBottomOf="@id/cardNoText"
+                android:layout_marginStart="2dp"
+                android:text="@string/currency_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardImage"
+                app:layout_constraintTop_toBottomOf="@id/usableLimitText"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:text="@string/card_balance_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardBalanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardBalance"
+                app:layout_constraintTop_toBottomOf="@id/usableLimitText"
+                android:layout_marginStart="2dp"
+                android:text="@{String.valueOf(card.balance)}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/balanceCurrencies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardBalanceText"
+                app:layout_constraintTop_toBottomOf="@id/usableLimitText"
+                android:layout_marginStart="2dp"
+                android:text="@string/currency_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardDept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardImage"
+                app:layout_constraintTop_toBottomOf="@id/cardBalanceText"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:text="@string/card_dept_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cardDeptText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardDept"
+                app:layout_constraintTop_toBottomOf="@id/cardBalanceText"
+                android:layout_marginStart="2dp"
+                android:text="@{String.valueOf(card.debt)}"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/debtCurrencies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/cardDeptText"
+                app:layout_constraintTop_toBottomOf="@id/balanceCurrencies"
+                android:layout_marginStart="2dp"
+                android:text="@string/currency_text" />
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/baseline_delete_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="#00FFFFFF"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
